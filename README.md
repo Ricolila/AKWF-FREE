@@ -184,7 +184,7 @@ The waveforms are defined in C as arrays of 16 unsigned integers, so basically 1
 The waveforms are defined in JS as 256 values long arrays of floating point numbers.
 
 - File format: Array
-- Length: 256 values
+- Length: 600 values
 - Bit depth: N/A
 - Sample rate: N/A
 - Channels: Mono
