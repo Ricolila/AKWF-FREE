@@ -193,6 +193,11 @@ The waveforms are defined in JS as 256 values long arrays of floating point numb
 
 View AKWF waveforms as PNG plots for visual reference. Each image offers a straightforward depiction of the waveform shape to aid analysis and selection.
 
+### Listening
+
+There is an [open source app](https://github.com/tashian/waves) for previewing the waveforms.
+See [AKWF Player](https://waves.tashian.com).
+
 ### Sound-generators
 
 #### [QU-Bit Chord](https://www.qubitelectronix.com/)
