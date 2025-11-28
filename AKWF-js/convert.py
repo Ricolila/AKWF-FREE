@@ -50,7 +50,14 @@ def process_bank(bank_dir, output_dir):
     if waveforms:
         output_file = output_dir / f'{bank_name}.json'
         with open(output_file, 'w') as f:
-            json.dump(waveforms, f)
+            # Format with each waveform on its own line
+            f.write('{\n')
+            items = list(waveforms.items())
+            for i, (name, samples) in enumerate(items):
+                samples_str = json.dumps(samples)
+                comma = ',' if i < len(items) - 1 else ''
+                f.write(f'  "{name}": {samples_str}{comma}\n')
+            f.write('}\n')
         print(f'Processed {bank_name}: {len(waveforms)} waveforms')
 
     return bank_name if waveforms else None
@@ -72,6 +79,10 @@ def main():
     bank_names = []
     for bank_dir in bank_dirs:
         if bank_dir.is_dir():
+            # Skip stereo folder entirely
+            if bank_dir.name == 'AKWF_stereo':
+                print(f'Skipping {bank_dir.name} (stereo)')
+                continue
             name = process_bank(bank_dir, output_dir)
             if name:
                 bank_names.append(name)
