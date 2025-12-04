@@ -184,7 +184,7 @@ The waveforms are defined in C as arrays of 16 unsigned integers, so basically 1
 The waveforms are defined in JS as 256 values long arrays of floating point numbers.
 
 - File format: Array
-- Length: 256 values
+- Length: 600 values
 - Bit depth: N/A
 - Sample rate: N/A
 - Channels: Mono
@@ -192,6 +192,11 @@ The waveforms are defined in JS as 256 values long arrays of floating point numb
 ### AKWF-png
 
 View AKWF waveforms as PNG plots for visual reference. Each image offers a straightforward depiction of the waveform shape to aid analysis and selection.
+
+### Listening
+
+There is an [open source app](https://github.com/tashian/waves) for previewing the waveforms.
+See [AKWF Player](https://waves.tashian.com).
 
 ### Sound-generators
 
